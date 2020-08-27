@@ -8,9 +8,9 @@ bool vitalsRangeIsOk(float value,int lowerLimit,int upperLimit)
 bool vitalsAreOk(float bpm, float spo2, float respRate) {
     
     assert(vitalsRangeIsOk(160,70,150) == false);
-    assert(vitalsRangeIsOk(20,70,150) == true);
+    assert(vitalsRangeIsOk(20,70,150) == false);
     assert(vitalsRangeIsOk(70,70,150) == true);
-    assert(vitalsRangeIsOk(90,70,150) == false);
+    assert(vitalsRangeIsOk(90,70,150) == true);
     return (vitalsRangeIsOk(bpm,70,150) && vitalsRangeIsOk(spo2,90,100) && vitalsRangeIsOk(respRate,30,95));
 }
         
