@@ -16,7 +16,7 @@ bool vitals_spo2(float spo2)
   return true;
 }
   
-bool vitals_respRate
+bool vitals_respRate(float respRate)
 {
   if(respRate < 30 || respRate > 95) {
   return false;
